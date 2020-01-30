@@ -58,10 +58,28 @@ a {
     padding-left: 0;
 }
 
+
+/* Header responsividade mobile */
+@media (max-width: 739px){
+    .header-logo {
+        float: none;
+    }
+    .header-menu ul {
+        float: none;
+        margin-top: 10px;
+    }
+}
+
 /* Main */
 
 .main-container {
     display: flex;
+}
+
+@media (max-width: 739px){
+    .main-container {
+        flex-direction: column;
+    }
 }
 
 /* Side-nav */
@@ -84,9 +102,9 @@ a {
     display: inline-block;
     width: 24px;
     height: 24px;
-    position: relative;
     top: 5px;
     margin-right: 15px;
+    position: relative;
     background-image: url('../img/icones.png');
 }
 
@@ -107,6 +125,40 @@ a {
 }
 .nav-hospedagens::before {
     background-position: 0 -120px;
+}
+
+/* Side-nav responsividade tablet */
+@media (min-width:740px) and (max-width: 980px) {
+    .side-nav {
+        width: 200px;
+    }
+}
+
+/* Side-nav responsividade mobile */
+@media (max-width: 739px){
+    .side-nav {
+        margin: 20px 0 0 20px;
+        background: none;
+        width: auto;
+    }
+    .side-nav li {
+        display: inline-block;
+    }
+    .side-nav li a::before {
+        display: block;
+        margin: 0;
+        top: 0;
+    }
+    .side-nav li a {
+        width: 44px;
+        height: 44px;
+        overflow: hidden;
+        padding: 10px;
+        border: none;
+        color: #252525;
+        background: #252525;
+        border-radius: 4px;
+    }
 }
 
 /* Produtos */
@@ -196,6 +248,35 @@ a {
     font-weight: bold;
     width: 70px;
     display: inline-block;
+}
+
+/* Produtos responsividade tablet */
+@media (min-width:740px) and (max-width: 980px) {
+    .produtos {
+        width: calc(100% - 200px);
+    }
+}
+
+/* Produtos responsividade mobile */
+@media (max-width: 739px){
+    .produtos {
+        width: 100%;
+    }
+    .produtos h1 {
+        float: none;
+    }
+    .adicionar-produtos {
+        float: none;
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .produtos-item img {
+        float: none;
+    }
+    .produtos-item ul {
+        float: none;
+        width: 100%;
+    }
 }
 
 /* Footer */
