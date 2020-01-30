@@ -59,12 +59,9 @@ a {
 }
 
 /* Main */
-/* Clearfix */
 
-.main-container::after, .main-container::before {
-    content: '';
-    display: table;
-    clear: both;
+.main-container {
+    display: flex;
 }
 
 /* Side-nav */
@@ -72,7 +69,6 @@ a {
 .side-nav {
     width: 300px;
     background: #252525;
-    float: left;
 }
 
 .side-nav li a {
@@ -116,7 +112,6 @@ a {
 /* Produtos */
 
 .produtos {
-    float: left;
     width: calc(100% - 300px);
     margin: 0 auto;
     max-width: 960px;
@@ -201,4 +196,14 @@ a {
     font-weight: bold;
     width: 70px;
     display: inline-block;
+}
+
+/* Footer */
+
+.footer {
+    background: #d6d3c8;
+    text-align: center;
+    padding: 60px 0;
+    font-size: 1.125em;
+    line-height: 1.4em;
 }
